@@ -14,7 +14,10 @@ black = {version = "^20.8b1", allow-prereleases = true}
 isort = "^5.7.0"
 flake8 = "^3.8.4"
 pytest = "^6.2.2"
-ipdb = "^0.13.5"
+ipdb = {version = "^0.13.5", optional = true}
+
+[tool.poetry.extras]
+debug = ["ipdb"]
 
 [tool.poetry.scripts]
 crawler = "crawler.crawler:main"

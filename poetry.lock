@@ -11,7 +11,7 @@ name = "appnope"
 version = "0.1.2"
 description = "Disable App Nap on macOS >= 10.9"
 category = "dev"
-optional = false
+optional = true
 python-versions = "*"
 
 [[package]]
@@ -41,7 +41,7 @@ name = "backcall"
 version = "0.2.0"
 description = "Specifications for callback functions passed in to an API"
 category = "dev"
-optional = false
+optional = true
 python-versions = "*"
 
 [[package]]
@@ -118,7 +118,7 @@ name = "decorator"
 version = "4.4.2"
 description = "Decorators for Humans"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=2.6, !=3.0.*, !=3.1.*"
 
 [[package]]
@@ -155,7 +155,7 @@ name = "ipdb"
 version = "0.13.5"
 description = "IPython-enabled pdb"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=2.7"
 
 [package.dependencies]
@@ -166,7 +166,7 @@ name = "ipython"
 version = "7.21.0"
 description = "IPython: Productive Interactive Computing"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.7"
 
 [package.dependencies]
@@ -197,7 +197,7 @@ name = "ipython-genutils"
 version = "0.2.0"
 description = "Vestigial utilities from IPython"
 category = "dev"
-optional = false
+optional = true
 python-versions = "*"
 
 [[package]]
@@ -218,7 +218,7 @@ name = "jedi"
 version = "0.18.0"
 description = "An autocompletion tool for Python that can be used for text editors."
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.6"
 
 [package.dependencies]
@@ -260,7 +260,7 @@ name = "parso"
 version = "0.8.1"
 description = "A Python Parser"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.6"
 
 [package.extras]
@@ -280,7 +280,7 @@ name = "pexpect"
 version = "4.8.0"
 description = "Pexpect allows easy control of interactive console applications."
 category = "dev"
-optional = false
+optional = true
 python-versions = "*"
 
 [package.dependencies]
@@ -291,7 +291,7 @@ name = "pickleshare"
 version = "0.7.5"
 description = "Tiny 'shelve'-like database with concurrency support"
 category = "dev"
-optional = false
+optional = true
 python-versions = "*"
 
 [[package]]
@@ -310,7 +310,7 @@ name = "prompt-toolkit"
 version = "3.0.16"
 description = "Library for building powerful interactive command lines in Python"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.6.1"
 
 [package.dependencies]
@@ -321,7 +321,7 @@ name = "ptyprocess"
 version = "0.7.0"
 description = "Run a subprocess in a pseudo terminal"
 category = "dev"
-optional = false
+optional = true
 python-versions = "*"
 
 [[package]]
@@ -353,7 +353,7 @@ name = "pygments"
 version = "2.8.0"
 description = "Pygments is a syntax highlighting package written in Python."
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.5"
 
 [[package]]
@@ -432,7 +432,7 @@ name = "traitlets"
 version = "5.0.5"
 description = "Traitlets Python configuration system"
 category = "dev"
-optional = false
+optional = true
 python-versions = ">=3.7"
 
 [package.dependencies]
@@ -475,13 +475,16 @@ name = "wcwidth"
 version = "0.2.5"
 description = "Measures the displayed width of unicode strings in a terminal"
 category = "dev"
-optional = false
+optional = true
 python-versions = "*"
+
+[extras]
+debug = []
 
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.9"
-content-hash = "eab95800af593e51b418ef6151c0c9670654f6c4d874273620041655da4a9bf5"
+content-hash = "0bb815a47c7fc993c3b72bc3a6b8fa2d5d0dddc870a320400558b7180fad7f4d"
 
 [metadata.files]
 appdirs = [

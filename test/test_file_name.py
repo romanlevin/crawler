@@ -8,6 +8,12 @@ from crawler.crawler import file_name
     [
         ("https://example.com/foo", "https://example.com", "out", "out/foo"),
         ("https://example.com", "https://example.com", "out", "out/index.html"),
+        (
+            "https://news.ycombinator.com/news",
+            "https://news.ycombinator.com/",
+            "out",
+            "out/news",
+        ),
     ],
 )
 def test_file_name(link, start, out_dir, expected):

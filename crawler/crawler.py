@@ -29,14 +29,11 @@ def write_page(page: bytes, path: str):
 
 
 def file_name(link: str, start: str, out_dir: str) -> str:
-    start = start.lstrip("/") + "/"
+    start = start.rstrip("/") + "/"
     return os.path.join(out_dir, link[len(start) :] or "index.html")
 
 
 def crawl(start: str, out_dir: str):
-    import ipdb
-
-    ipdb.set_trace()
     session = requests.Session()
     seen_links = {
         start,
