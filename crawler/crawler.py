@@ -48,7 +48,6 @@ def crawl(start: str, out_dir: str):
             current_url = to_crawl.get()
         except queue.Empty:
             break
-        local_path = file_name(joined_url, start, out_dir)
         page = fetch_page(current_url, session)
         for link_url in get_links(page.text):
             defragged_url, _ = urldefrag(link_url)
@@ -57,6 +56,7 @@ def crawl(start: str, out_dir: str):
                 continue
             seen_links.add(joined_url)
             to_crawl.put(joined_url)
+            local_path = file_name(joined_url, start, out_dir)
             write_page(
                 page.content,
                 local_path,
