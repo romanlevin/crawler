@@ -87,6 +87,10 @@ def crawl(start: str, out_dir: str):
 
 def main():
     start = sys.argv[1]
+    # TODO: Handle start parameters with no schema
+    if not start.startswith(("https://", "http://")):
+        print("First paramater must start with https:// or http://")
+        sys.exit(1)
     # TODO: Make out_dir parameter optional
     out_dir = sys.argv[2]
     try:
