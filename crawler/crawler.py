@@ -3,7 +3,7 @@ import os
 import queue
 import sys
 from typing import Iterator
-from urllib.parse import urldefrag, urljoin, urlparse
+from urllib.parse import urldefrag, urljoin
 
 import requests
 from bs4 import BeautifulSoup
@@ -34,14 +34,13 @@ def file_name(link: str, start: str, out_dir: str) -> str:
 
 
 def crawl(start: str, out_dir: str):
+    import ipdb
+
+    ipdb.set_trace()
     session = requests.Session()
     seen_links = {
         start,
     }
-    parsed_start = urlparse(start)
-    scheme = parsed_start.scheme
-    netloc = parsed_start.netloc
-    scheme_netloc = f"{scheme}://{netloc}"
     to_crawl = queue.Queue()
     to_crawl.put(start)
     while True:
